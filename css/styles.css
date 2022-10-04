@@ -819,6 +819,7 @@ body {
    height: 30px;
    border-radius: 50%;
    padding: 0;
+   transition: border-color var(--accent-color);
 }
 
 .modal-close-button-icon {
@@ -826,7 +827,11 @@ body {
    transition: fill var(--transition-dur-and-func);
 }
 
-.modal-close-button-icon:hover {
+.modal-close-button:hover {
+   border-color: var(--accent-color);   
+}
+
+.modal-close-button:hover .modal-close-button-icon {
    fill: var(--accent-color);
 }
 
