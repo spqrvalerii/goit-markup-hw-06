@@ -520,7 +520,7 @@ body {
 }
 
 .footer-wrapper {
-   
+   margin-right: 93px;
 }
 
 .footer-text {
@@ -580,6 +580,78 @@ body {
 .footer-box {
    display: flex;
    align-items: baseline;
+}
+
+.footer-subscribe {
+   min-width: 570px;
+}
+
+.footer-subscribe-text {
+   margin-bottom: 20px;
+   font-weight: 700;
+   font-size: 14px;
+   line-height: 1.14;
+   letter-spacing: 0.03em;
+   text-transform: uppercase;
+   color: var(--primary-bg-color);
+}
+
+.footer-form-input {
+   width: 358px;
+   padding: 15px 16px;
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   border-radius: 4px;
+   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+   background: var(--hero-footer-bg-color);
+   color: var(--primary-bg-color);
+   margin-right: 12px;
+}
+
+.footer-form-input::placeholder {
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 1.25px;
+   color: rgba(255, 255, 255, 0.6);   
+}
+
+.footer-form-wrapper {
+   /* display: block; */
+   /* position: relative;    */
+}
+
+.footer-form-icon {
+   position: absolute;
+   bottom: 0;
+   right: 28px;
+   transform: translateY(-50%);
+}
+
+.footer-form-btn {
+   color: var(--primary-bg-color);
+   background-color: var(--accent-color);
+   border: none;
+   cursor: pointer;
+   position: relative;
+   font-family: 'Roboto';
+   font-weight: 700;
+   font-size: 16px;
+   line-height: 1.88;
+   border-radius: 4px;
+   padding-top: 10px;   
+   padding-bottom: 10px;
+   padding-left: 28px;
+   padding-right: 62px;
+   letter-spacing: 0.06em;
+   display: inline-block;
+   align-items: center;
+   min-width: 200px;
+   transition: color var(--transition-dur-and-func), background-color var(--transition-dur-and-func);
+}
+
+.footer-form-btn:hover,
+.footer-form-btn:focus {
+   color: var(--primary-bg-color);
+   background-color: var(--button-hover-focus-bg-color);
 }
 
 /* =================Portfolio================== */
@@ -754,6 +826,10 @@ body {
    transition: fill var(--transition-dur-and-func);
 }
 
+.modal-close-button-icon:hover {
+   fill: var(--accent-color);
+}
+
 .modal-caption {
    color: var(--title-text-color);
    font-family: 'Roboto';
@@ -835,37 +911,6 @@ body {
    border-color: var(--accent-color);
 }
 
-.modal-form-check-wrapper {
-   display: flex;
-   align-items: center;
-   margin-bottom: 20px;
-}
-
-.modal-form-own-check {
-   /* border: 0.2px solid var(--primary-bg-color); */
-   border: 0.2px solid var(--title-text-color);
-   border-radius: 2px;
-   cursor: pointer;
-   margin-right: 8.38px;
-}
-
-.modal-form-check:checked + .modal-form-own-check {
-   background-color: var(--accent-color);
-   border-color: var(--accent-color);
-}
-
-.modal-form-check:checked + .modal-form-own-check {
-   outline: 2px solid var(--accent-color);
-}
-
-.modal-form-own-check-icon {
-   display: none;
-}
-
-.modal-form-check:checked + .modal-form-own-check .modal-form-own-check-icon {
-   display: block;   
-}
-
 .modal-form-btn {
    color: var(--primary-bg-color);
    background-color: var(--accent-color);
@@ -881,13 +926,51 @@ body {
    display: inline-block;
    align-self: center;
    min-width: 96px;
-   transition: color var(--transition-dur-and-func), background-color var(--transition-dur-and-func);
+   transition: color var(--transition-dur-and-func), background-color var(--transition-dur-and-func), filter var(--transition-dur-and-func);
+   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .modal-form-btn:hover,
 .modal-form-btn:focus {
    color: var(--primary-bg-color);
    background-color: var(--button-hover-focus-bg-color);
+}
+
+.modal-form-link {
+   color: var(--accent-color);
+}
+
+.modal-form-check-wrapper {
+   display: flex;
+   align-items: center;
+   margin-bottom: 20px;
+}
+
+.modal-form-own-check {
+   border: 1px solid var(--title-text-color);
+   border-radius: 2px;
+   cursor: pointer;
+   margin-right: 10px;
+}
+
+.modal-form-check:checked + .modal-form-own-check {
+   background-color: var(--accent-color);
+   border-color: var(--accent-color);
+   border: none;
+}
+
+.modal-form-check:focus + .modal-form-own-check {
+   outline: 2px solid var(--accent-color);
+   border: none;   
+}
+
+.modal-form-own-check-icon {
+   display: none;
+   fill: var(--primary-bg-color);
+}
+
+.modal-form-check:checked + .modal-form-own-check .modal-form-own-check-icon {
+   display: block;
 }
 
 /* ================/modal form================= */
